@@ -10,11 +10,19 @@
 // MAIN FUNCTION ---------------------------------------------------------------
 int main()
 {
-    node myNode("Hello World\n");
-    std::cout << myNode.get_name();
-    node my2ndNode("2nd\n");
-    myNode.add_child(my2ndNode);
-    std::cout << (myNode.get_child(1))->get_name();
+    // create tree root
+    node * myTree = new node("root");
+    
+    // create objects of class node
+    node leaf1("left child");
+    node leaf2("right child");
+    
+    // add nodes as leafs to tree
+    myTree->add_child(leaf1);
+    myTree->add_child(leaf2);
+    
+    // delete tree
+    delete myTree;
     
     return 0;
 }

@@ -15,7 +15,9 @@ node::node(const std::string& name)
 // DESTRUCTOR ------------------------------------------------------------------
 node::~node() // virtual reicht im Header-File
 {
-    std::cout << "Destructing nodes...\n";
+    std::cout << "enter ~node() of \"";
+    std::cout << this->get_name();
+    std::cout << "\"\n";
 }
 
 
