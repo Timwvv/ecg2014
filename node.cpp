@@ -18,6 +18,14 @@ node::~node() // virtual reicht im Header-File
     std::cout << "enter ~node() of \"";
     std::cout << this->get_name();
     std::cout << "\"\n";
+    
+    for(int i=0;i<this->count_childs;i++){
+        (this->childs[i])->~node();
+    }
+    
+    std::cout << "leave ~node() of \"";
+    std::cout << this->get_name();
+    std::cout << "\"\n";
 }
 
 
